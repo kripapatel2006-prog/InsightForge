@@ -191,3 +191,33 @@ nav ul li a:hover{
     background:white;
     padding:10px;
 }
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+    background: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-top: 2px solid #2563eb;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #60a5fa;
+}
+
+.footer-content p {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #d1d5db;
+}
+
+.footer-copy {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #9ca3af;
+}

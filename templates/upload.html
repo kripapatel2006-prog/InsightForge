@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Dataset</title>
+    <title>Upload Dataset | InsightForge</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
-<div class="hero">
-    <h1>Upload Your Dataset</h1>
+<header>
 
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="dataset" required>
-        <br><br>
+    <nav>
 
-        <button class="btn" type="submit">
-            Upload
-        </button>
-    </form>
+        <h2>InsightForge</h2>
 
-</div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/upload-page">Upload</a></li>
+            <li><a href="/report">Report</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="upload-section">
+
+    <div class="upload-card">
+
+        <h1>Upload Your Dataset</h1>
+
+        <p>
+            Select a CSV file to analyze your data and generate AI-powered insights,
+            statistics, and visualizations.
+        </p>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+            <input
+                type="file"
+                name="dataset"
+                accept=".csv"
+                required
+                class="file-input"
+            >
+
+            <br><br>
+
+            <button class="btn" type="submit">
+                Analyze Dataset
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
 <footer class="footer">
 
     <div class="footer-content">
@@ -37,5 +79,9 @@
     </div>
 
 </footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
 </body>
+
 </html>

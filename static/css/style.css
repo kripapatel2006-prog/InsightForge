@@ -310,4 +310,72 @@ nav ul li a:hover{
     .btn{
         font-size:20px;
     }
+}/* ==========================================
+   UPLOAD PAGE
+========================================== */
+
+.upload-section{
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.upload-card{
+    width:100%;
+    max-width:650px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.30);
+}
+
+.upload-card h1{
+    font-size:42px;
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+.upload-card p{
+    color:#dbeafe;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.file-input{
+    width:100%;
+    padding:15px;
+    background:white;
+    color:#333;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.file-input:hover{
+    background:#f3f4f6;
+}
+
+.upload-card .btn{
+    margin-top:20px;
+}
+
+@media(max-width:768px){
+
+    .upload-card{
+        padding:30px 20px;
+    }
+
+    .upload-card h1{
+        font-size:32px;
+    }
+
+    .upload-card p{
+        font-size:16px;
+    }
+
 }

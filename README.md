@@ -1,20 +1,25 @@
 # InsightForge
 
-InsightForge is an AI-powered data analytics web application built using Flask and Python. It enables users to upload CSV datasets, perform instant data analysis, visualize key statistics, and receive automated insights through an interactive and user-friendly dashboard.
+InsightForge is an AI-powered data analytics web application that enables users to upload CSV datasets, analyze data, generate visualizations, and receive AI-generated insights through an interactive and responsive dashboard.
 
 ---
 
 ## Features
 
 - Upload CSV datasets
-- Dataset summary (Rows, Columns, Missing Values, Duplicate Rows)
-- Dataset preview
-- File information
-- Memory usage analysis
-- Numeric and categorical column detection
-- AI-generated dataset insights
+- Automatic dataset analysis
+- Dataset summary statistics
+  - Number of rows
+  - Number of columns
+  - Missing values
+  - Duplicate records
+- AI-generated insights
 - Automatic data visualization
-- Professional dashboard interface
+- Dataset preview
+- Download analysis report as PDF
+- Responsive design for desktop and mobile
+- Modern user interface with hamburger navigation
+- Live deployment using Render
 
 ---
 
@@ -29,10 +34,16 @@ InsightForge is an AI-powered data analytics web application built using Flask a
 - Python
 - Flask
 
-### Libraries
+### Data Analysis
 - Pandas
 - Matplotlib
-- NumPy
+
+### PDF Generation
+- ReportLab
+
+### Deployment
+- GitHub
+- Render
 
 ---
 
@@ -41,14 +52,11 @@ InsightForge is an AI-powered data analytics web application built using Flask a
 ```
 InsightForge/
 │
-├── app.py
-├── requirements.txt
-│
 ├── static/
+│   ├── charts/
 │   ├── css/
-│   ├── js/
 │   ├── images/
-│   └── charts/
+│   └── js/
 │
 ├── templates/
 │   ├── index.html
@@ -56,39 +64,41 @@ InsightForge/
 │   └── report.html
 │
 ├── uploads/
-│
-└── README.md
+├── app.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## Installation
+## How to Run the Project
 
-Clone the repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/InsightForge.git
+git clone https://github.com/kripapatel2006-prog/InsightForge.git
 ```
 
-Navigate into the project
+### 2. Navigate to the project folder
 
 ```bash
 cd InsightForge
 ```
 
-Install the required packages
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the application
+### 4. Run the application
 
 ```bash
 python app.py
 ```
 
-Open your browser and visit
+### 5. Open your browser
 
 ```
 http://127.0.0.1:5000
@@ -96,51 +106,35 @@ http://127.0.0.1:5000
 
 ---
 
-## How It Works
-
-1. Upload a CSV dataset.
-2. The application reads the dataset using Pandas.
-3. InsightForge analyzes:
-   - Total rows
-   - Total columns
-   - Missing values
-   - Duplicate rows
-   - Memory usage
-   - Numeric and categorical columns
-4. AI-generated insights are displayed.
-5. A data visualization chart is generated automatically.
-6. The dataset preview is presented in a professional report layout.
-
----
-
-## Future Enhancements
-
-- Interactive Plotly visualizations
-- Correlation heatmap
-- Histogram and scatter plots
-- Excel (.xlsx) file support
-- Data cleaning tools
-- Machine Learning model training
-- Downloadable PDF reports
-- User authentication
-- Dark mode
-- Cloud deployment
-
----
-
 ## Screenshots
 
-### Home Page
+You can add screenshots of:
 
-_Add screenshot here_
+- Home Page
+- Upload Page
+- Dataset Report
+- Data Visualization
+- Mobile View
 
-### Upload Dataset
+---
 
-_Add screenshot here_
+## Future Improvements
 
-### Analysis Report
+- Interactive Plotly charts
+- Advanced AI insights
+- Multiple visualization options
+- Support for Excel datasets
+- Export reports in multiple formats
 
-_Add screenshot here_
+---
+
+## Live Demo
+
+Add your Render deployment link here after deployment.
+
+Example:
+
+https://your-app-name.onrender.com
 
 ---
 
@@ -151,6 +145,9 @@ _Add screenshot here_
 Computer Science Engineering (Data Science)
 
 Vignana Bharathi Institute of Technology
+
+GitHub:
+https://github.com/kripapatel2006-prog
 
 ---
 

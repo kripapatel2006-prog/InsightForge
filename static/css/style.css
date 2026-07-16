@@ -1,6 +1,6 @@
-/* =========================================
-   GLOBAL STYLES
-========================================= */
+/* ===========================
+   GLOBAL
+=========================== */
 
 *{
     margin:0;
@@ -12,16 +12,17 @@
 body{
     background:linear-gradient(135deg,#0f172a,#1e3a8a);
     color:white;
-    line-height:1.6;
+    overflow-x:hidden;
 }
 
-a{
-    text-decoration:none;
+img{
+    max-width:100%;
+    height:auto;
 }
 
-/* =========================================
-   HEADER
-========================================= */
+/* ===========================
+   NAVBAR
+=========================== */
 
 header{
     padding:20px 8%;
@@ -34,30 +35,36 @@ nav{
     flex-wrap:wrap;
 }
 
-nav h2{
+.logo{
     color:#38bdf8;
-    font-size:30px;
+    font-size:32px;
+    font-weight:bold;
 }
 
-nav ul{
+.nav-links{
     list-style:none;
     display:flex;
     gap:25px;
 }
 
-nav ul li a{
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
     color:white;
+    text-decoration:none;
     font-size:18px;
     transition:.3s;
 }
 
-nav ul li a:hover{
+.nav-links a:hover{
     color:#38bdf8;
 }
 
-/* =========================================
+/* ===========================
    HERO SECTION
-========================================= */
+=========================== */
 
 .hero{
     min-height:85vh;
@@ -66,44 +73,41 @@ nav ul li a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
 }
 
 .hero h1{
-    font-size:55px;
+    font-size:60px;
     margin-bottom:20px;
 }
 
 .hero p{
     width:70%;
-    font-size:20px;
-    line-height:1.8;
+    font-size:22px;
+    line-height:1.7;
     margin-bottom:35px;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
-
 .btn{
     display:inline-block;
-    background:#38bdf8;
+    background:#2563eb;
     color:white;
-    padding:14px 35px;
+    padding:15px 35px;
     border-radius:8px;
+    text-decoration:none;
     font-size:18px;
     font-weight:bold;
     transition:.3s;
 }
 
 .btn:hover{
-    background:#2563eb;
-    transform:translateY(-2px);
+    background:#1d4ed8;
+    transform:scale(1.05);
 }
 
-/* =========================================
+/* ===========================
    REPORT PAGE
-========================================= */
+=========================== */
 
 .report-container{
     width:90%;
@@ -117,26 +121,18 @@ nav ul li a:hover{
     margin-bottom:35px;
 }
 
-/* =========================================
-   SECTIONS
-========================================= */
-
 .section{
     background:rgba(255,255,255,.08);
     padding:25px;
     border-radius:15px;
     margin-bottom:30px;
-    box-shadow:0 8px 20px rgba(0,0,0,.30);
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
 }
 
 .section h2{
-    color:#4fc3ff;
+    color:#38bdf8;
     margin-bottom:20px;
 }
-
-/* =========================================
-   SUMMARY CARDS
-========================================= */
 
 .summary-grid{
     display:grid;
@@ -148,63 +144,55 @@ nav ul li a:hover{
     background:rgba(255,255,255,.08);
     padding:20px;
     border-radius:12px;
-}
-
-.card p{
-    margin:10px 0;
-    font-size:17px;
+    font-size:18px;
 }
 
 .card span{
-    color:#4fc3ff;
+    color:#38bdf8;
     font-weight:bold;
 }
 
-/* =========================================
+/* ===========================
    TABLE
-========================================= */
+=========================== */
 
 .table{
     width:100%;
     border-collapse:collapse;
-    margin-top:20px;
-    background:white;
-    color:black;
-    border-radius:10px;
-    overflow:hidden;
+    overflow-x:auto;
+    display:block;
 }
 
 .table th{
-    background:#1c6dd0;
+    background:#2563eb;
     color:white;
     padding:12px;
 }
 
 .table td{
     padding:12px;
-    border-bottom:1px solid #ddd;
+    border-bottom:1px solid rgba(255,255,255,.15);
 }
 
 .table tr:nth-child(even){
-    background:#f3f6fb;
+    background:rgba(255,255,255,.05);
 }
 
-/* =========================================
+/* ===========================
    INSIGHTS
-========================================= */
+=========================== */
 
 .insights{
-    padding-left:20px;
+    line-height:2;
 }
 
 .insights li{
-    margin-bottom:12px;
-    line-height:1.8;
+    margin-left:25px;
 }
 
-/* =========================================
+/* ===========================
    CHARTS
-========================================= */
+=========================== */
 
 .chart-container{
     text-align:center;
@@ -212,68 +200,71 @@ nav ul li a:hover{
 }
 
 .chart-image{
-    width:100%;
+    width:90%;
     max-width:850px;
-    border-radius:12px;
     background:white;
     padding:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,.35);
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
 }
 
-/* =========================================
+/* ===========================
    FOOTER
-========================================= */
+=========================== */
 
 .footer{
-    background:#08111f;
-    text-align:center;
-    padding:35px 20px;
+    background:#0f172a;
+    padding:30px 20px;
     margin-top:60px;
+    text-align:center;
     border-top:2px solid #2563eb;
 }
 
-.footer-content h3{
-    color:#60a5fa;
+.footer h3{
+    color:#38bdf8;
     margin-bottom:10px;
+    font-size:28px;
 }
 
-.footer-content p{
+.footer p{
+    margin:6px 0;
     color:#d1d5db;
-    margin:5px 0;
 }
 
 .footer-copy{
+    color:#9ca3af;
     margin-top:15px;
-    color:#94a3b8;
-    font-size:14px;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
+/* ===========================
+   MOBILE
+=========================== */
 
-img{
-    max-width:100%;
-    height:auto;
-}
-
-/* Tablets */
-
-@media(max-width:768px){
+@media (max-width:768px){
 
     header{
-        padding:20px;
+        padding:15px;
     }
 
     nav{
         flex-direction:column;
-        gap:15px;
+        gap:18px;
+        text-align:center;
     }
 
-    nav ul{
+    .logo{
+        font-size:34px;
+    }
+
+    .nav-links{
         flex-direction:column;
-        gap:12px;
-        align-items:center;
+        gap:15px;
+        width:100%;
+    }
+
+    .nav-links a{
+        display:block;
+        font-size:20px;
     }
 
     .hero{
@@ -282,82 +273,39 @@ img{
     }
 
     .hero h1{
-        font-size:38px;
+        font-size:46px;
+        line-height:1.2;
     }
 
     .hero p{
         width:100%;
         font-size:18px;
+        line-height:1.8;
     }
 
-    .report-container{
-        width:95%;
-    }
-
-    .report-title{
-        font-size:34px;
+    .btn{
+        width:90%;
+        max-width:300px;
+        text-align:center;
     }
 
     .summary-grid{
         grid-template-columns:1fr;
     }
 
-    .section{
-        padding:20px;
-    }
-
     .card{
-        padding:18px;
-    }
-
-    .btn{
-        width:100%;
-        text-align:center;
-    }
-
-    .table{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
-    }
-
-}
-
-/* Mobile */
-
-@media(max-width:480px){
-
-    nav h2{
-        font-size:24px;
-    }
-
-    .hero h1{
-        font-size:30px;
-    }
-
-    .hero p{
         font-size:16px;
     }
 
     .report-title{
-        font-size:28px;
+        font-size:32px;
     }
 
-    .section h2{
+    .chart-image{
+        width:100%;
+    }
+
+    .footer h3{
         font-size:22px;
     }
-
-    .card p{
-        font-size:15px;
-    }
-
-    .btn{
-        padding:12px;
-        font-size:16px;
-    }
-
-    .footer-content h3{
-        font-size:20px;
-    }
-
 }

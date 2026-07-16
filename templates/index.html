@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>InsightForge</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -11,19 +13,24 @@
 <body>
 
 <header>
-    <nav>
-        <h2>InsightForge</h2>
 
-        <ul>
+    <nav>
+
+        <h2 class="logo">InsightForge</h2>
+
+        <ul class="nav-links">
             <li><a href="/">Home</a></li>
-            <li><a href="#">Upload</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Report</a></li>
+            <li><a href="/upload-page">Upload</a></li>
+            <li><a href="/report">Report</a></li>
         </ul>
+
     </nav>
+
 </header>
 
+
 <section class="hero">
+
     <h1>AI-Powered Data Analytics Platform</h1>
 
     <p>
@@ -31,8 +38,13 @@
         and gain AI-powered insights in seconds.
     </p>
 
-   <a href="/upload-page" class="btn">Upload Dataset</a>
+    <a href="/upload-page" class="btn">
+        Upload Dataset
+    </a>
+
 </section>
+
+
 <footer class="footer">
 
     <div class="footer-content">
@@ -41,6 +53,8 @@
 
         <p>AI-Powered Data Analytics Platform</p>
 
+        <p>Made with ❤️ using Flask & Python</p>
+
         <p class="footer-copy">
             © 2026 Kripa Patel. All Rights Reserved.
         </p>
@@ -48,5 +62,7 @@
     </div>
 
 </footer>
+
 </body>
+
 </html>

@@ -1,3 +1,7 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
 *{
     margin:0;
     padding:0;
@@ -8,7 +12,16 @@
 body{
     background:linear-gradient(135deg,#0f172a,#1e3a8a);
     color:white;
+    line-height:1.6;
 }
+
+a{
+    text-decoration:none;
+}
+
+/* =========================================
+   HEADER
+========================================= */
 
 header{
     padding:20px 8%;
@@ -18,6 +31,7 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    flex-wrap:wrap;
 }
 
 nav h2{
@@ -33,23 +47,26 @@ nav ul{
 
 nav ul li a{
     color:white;
-    text-decoration:none;
     font-size:18px;
-    transition:0.3s;
+    transition:.3s;
 }
 
 nav ul li a:hover{
     color:#38bdf8;
 }
 
+/* =========================================
+   HERO SECTION
+========================================= */
+
 .hero{
-    height:85vh;
+    min-height:85vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
+    padding:30px;
 }
 
 .hero h1{
@@ -60,28 +77,33 @@ nav ul li a:hover{
 .hero p{
     width:70%;
     font-size:20px;
-    line-height:1.7;
+    line-height:1.8;
     margin-bottom:35px;
 }
 
+/* =========================================
+   BUTTONS
+========================================= */
+
 .btn{
+    display:inline-block;
     background:#38bdf8;
     color:white;
-    padding:15px 35px;
+    padding:14px 35px;
     border-radius:8px;
-    text-decoration:none;
     font-size:18px;
     font-weight:bold;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .btn:hover{
     background:#2563eb;
-    transform:scale(1.05);
+    transform:translateY(-2px);
 }
-/* ===========================
+
+/* =========================================
    REPORT PAGE
-=========================== */
+========================================= */
 
 .report-container{
     width:90%;
@@ -93,15 +115,18 @@ nav ul li a:hover{
     text-align:center;
     font-size:42px;
     margin-bottom:35px;
-    color:white;
 }
 
+/* =========================================
+   SECTIONS
+========================================= */
+
 .section{
-    background:rgba(255,255,255,0.08);
+    background:rgba(255,255,255,.08);
     padding:25px;
     border-radius:15px;
     margin-bottom:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+    box-shadow:0 8px 20px rgba(0,0,0,.30);
 }
 
 .section h2{
@@ -109,17 +134,25 @@ nav ul li a:hover{
     margin-bottom:20px;
 }
 
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
 .summary-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:15px;
+    gap:20px;
 }
 
 .card{
-    background:rgba(255,255,255,0.08);
-    padding:18px;
+    background:rgba(255,255,255,.08);
+    padding:20px;
     border-radius:12px;
-    font-size:18px;
+}
+
+.card p{
+    margin:10px 0;
+    font-size:17px;
 }
 
 .card span{
@@ -127,10 +160,18 @@ nav ul li a:hover{
     font-weight:bold;
 }
 
+/* =========================================
+   TABLE
+========================================= */
+
 .table{
     width:100%;
     border-collapse:collapse;
     margin-top:20px;
+    background:white;
+    color:black;
+    border-radius:10px;
+    overflow:hidden;
 }
 
 .table th{
@@ -141,42 +182,29 @@ nav ul li a:hover{
 
 .table td{
     padding:12px;
-    border-bottom:1px solid rgba(255,255,255,0.15);
+    border-bottom:1px solid #ddd;
 }
 
 .table tr:nth-child(even){
-    background:rgba(255,255,255,0.05);
+    background:#f3f6fb;
 }
 
+/* =========================================
+   INSIGHTS
+========================================= */
+
 .insights{
-    line-height:2;
+    padding-left:20px;
 }
 
 .insights li{
-    margin-left:25px;
+    margin-bottom:12px;
+    line-height:1.8;
 }
 
-.center{
-    text-align:center;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 35px;
-    background:#1c6dd0;
-    color:white;
-    border-radius:10px;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#338dff;
-}
-/* ===========================
-   Charts
-=========================== */
+/* =========================================
+   CHARTS
+========================================= */
 
 .chart-container{
     text-align:center;
@@ -184,40 +212,152 @@ nav ul li a:hover{
 }
 
 .chart-image{
-    width:90%;
+    width:100%;
     max-width:850px;
     border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.4);
     background:white;
     padding:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
 }
-/* ===========================
+
+/* =========================================
    FOOTER
-=========================== */
+========================================= */
 
-.footer {
-    background: #0f172a;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 60px;
-    border-top: 2px solid #2563eb;
+.footer{
+    background:#08111f;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:60px;
+    border-top:2px solid #2563eb;
 }
 
-.footer-content h3 {
-    font-size: 24px;
-    margin-bottom: 8px;
-    color: #60a5fa;
+.footer-content h3{
+    color:#60a5fa;
+    margin-bottom:10px;
 }
 
-.footer-content p {
-    margin: 6px 0;
-    font-size: 15px;
-    color: #d1d5db;
+.footer-content p{
+    color:#d1d5db;
+    margin:5px 0;
 }
 
-.footer-copy {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #9ca3af;
+.footer-copy{
+    margin-top:15px;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Tablets */
+
+@media(max-width:768px){
+
+    header{
+        padding:20px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:12px;
+        align-items:center;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        width:100%;
+        font-size:18px;
+    }
+
+    .report-container{
+        width:95%;
+    }
+
+    .report-title{
+        font-size:34px;
+    }
+
+    .summary-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:20px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+    nav h2{
+        font-size:24px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .report-title{
+        font-size:28px;
+    }
+
+    .section h2{
+        font-size:22px;
+    }
+
+    .card p{
+        font-size:15px;
+    }
+
+    .btn{
+        padding:12px;
+        font-size:16px;
+    }
+
+    .footer-content h3{
+        font-size:20px;
+    }
+
 }

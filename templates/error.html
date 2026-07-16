@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightForge | Error</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <h2>InsightForge</h2>
+
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/upload-page">Upload</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<div class="hero">
+
+    <div class="section" style="max-width:700px; text-align:center;">
+
+        <h1 style="font-size:60px;">⚠️</h1>
+
+        <h2>Oops! Something Went Wrong</h2>
+
+        <br>
+
+        <p style="font-size:18px; line-height:1.8;">
+
+            {{ message }}
+
+        </p>
+
+        <br>
+
+        <p style="color:#cbd5e1;">
+
+            Possible reasons:
+            <br><br>
+
+            • File is too large.
+            <br>
+
+            • Invalid or corrupted CSV file.
+            <br>
+
+            • Dataset contains unsupported values.
+            <br>
+
+            • Server couldn't process the request.
+
+        </p>
+
+        <br><br>
+
+        <a href="/upload-page" class="btn">
+            Try Another Dataset
+        </a>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h3>InsightForge</h3>
+
+        <p>AI-Powered Data Analytics Platform</p>
+
+        <p class="footer-copy">
+            © 2026 Kripa Patel. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
